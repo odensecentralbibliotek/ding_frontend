@@ -37,7 +37,7 @@ function ding_frontend_field_formatter_view($entity_type, $entity, $field, $inst
         $timestamp = $date->format(DATE_FORMAT_UNIX);
         $vars = array(
           'day' => format_date($timestamp, 'custom', 'j', $timezone),
-          'month' => format_date($timestamp, 'custom', 'F', $timezone),
+          'month' => format_date($timestamp, 'custom', 'M', $timezone),
           'weekday' => format_date($timestamp, 'custom', 'l', $timezone),
           'today' => date('j.F.l') == date('j.F.l', $timestamp),
         );
