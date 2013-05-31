@@ -87,7 +87,7 @@ function ding_frontend_date_formats() {
 
   $formats[] = array(
     'type'    => 'long_date_only',
-    'format'  => 'l j. F',
+    'format'  => 'l j. F Y',
     'locales' => array(),
   );
 
