@@ -33,7 +33,7 @@ Website',
 search/node',
   );
   $display = new panels_display();
-  $display->layout = 'threecol_25_50_25';
+  $display->layout = 'two_4_12';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -41,6 +41,8 @@ search/node',
       'middle' => NULL,
       'left' => NULL,
       'right' => NULL,
+      'grid_12_right' => NULL,
+      'grid_4_left' => NULL,
     ),
   );
   $display->cache = array();
@@ -49,7 +51,30 @@ search/node',
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'middle';
+    $pane->panel = 'grid_12_right';
+    $pane->type = 'page_tabs';
+    $pane->subtype = 'page_tabs';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'type' => 'primary',
+      'id' => 'tabs',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-1'] = $pane;
+    $display->panels['grid_12_right'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
+    $pane->panel = 'grid_12_right';
     $pane->type = 'views';
     $pane->subtype = 'ding_node_search';
     $pane->shown = TRUE;
@@ -79,10 +104,10 @@ search/node',
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = '';
-    $display->content['new-1'] = $pane;
-    $display->panels['middle'][0] = 'new-1';
+    $display->content['new-2'] = $pane;
+    $display->panels['grid_12_right'][1] = 'new-2';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

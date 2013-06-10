@@ -22,7 +22,7 @@ function ding_frontend_ctools_plugin_api() {
  * Implements hook_views_api().
  */
 function ding_frontend_views_api() {
-  return array("version" => "3.0");
+  return array("api" => "3.0");
 }
 
 /**
@@ -45,10 +45,10 @@ function ding_frontend_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => '138',
-          'height' => '73',
+          'width' => 138,
+          'height' => 73,
         ),
-        'weight' => '1',
+        'weight' => 1,
       ),
     ),
   );
