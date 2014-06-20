@@ -36,7 +36,7 @@ projects[strongarm][version] = "2.0"
 
 projects[views][type] = module
 projects[views][subdir] = contrib
-projects[views][version] = "3.3"
+projects[views][version] = "3.8"
 
 ; Ding! modules
 
