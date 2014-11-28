@@ -10,7 +10,7 @@
 function ding_frontend_views_default_views() {
   $export = array();
 
-  $view = new view();
+$view = new view();
 $view->name = 'ding_node_search';
 $view->description = '';
 $view->tag = 'default';
@@ -235,7 +235,24 @@ $handler->display->display_options['fields']['field_ding_event_lead']['element_w
 $handler->display->display_options['fields']['field_ding_event_lead']['element_default_classes'] = FALSE;
 $handler->display->display_options['fields']['field_ding_event_lead']['hide_empty'] = TRUE;
 $handler->display->display_options['fields']['field_ding_event_lead']['hide_alter_empty'] = FALSE;
-  /* Sort criterion: Content: Updated date */
+$handler->display->display_options['fields']['term_node_tid']['id'] = 'term_node_tid';
+$handler->display->display_options['fields']['term_node_tid']['table'] = 'node';
+$handler->display->display_options['fields']['term_node_tid']['field'] = 'term_node_tid';
+$handler->display->display_options['fields']['term_node_tid']['label'] = '';
+$handler->display->display_options['fields']['term_node_tid']['exclude'] = TRUE;
+$handler->display->display_options['fields']['term_node_tid']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['term_node_tid']['separator'] = ' | ';
+$handler->display->display_options['fields']['term_node_tid']['link_to_taxonomy'] = FALSE;
+$handler->display->display_options['fields']['term_node_tid']['limit'] = TRUE;
+$handler->display->display_options['fields']['term_node_tid']['vocabularies'] = array(
+  'ding_content_tags' => 'ding_content_tags',
+  'event_category' => 0,
+  'event_target' => 0,
+  'image_tags' => 0,
+  'news_category' => 0,
+  'newsletter' => 0,
+);
+/* Sort criterion: Content: Updated date */
 $handler->display->display_options['sorts']['changed']['id'] = 'changed';
 $handler->display->display_options['sorts']['changed']['table'] = 'node';
 $handler->display->display_options['sorts']['changed']['field'] = 'changed';
